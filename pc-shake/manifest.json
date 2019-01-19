@@ -1,0 +1,11 @@
+{
+    "name": "shake",
+    "version": "1.0.0",
+    "description": "I don't know what this is",
+    "author": "ohlookitsderpy",
+    "license": "Unilicense",
+    "repo": "https://github.com/ohlookitsderpy/pc-shake",
+    "dependencies": [
+        "pc-commands"
+    ]
+}
