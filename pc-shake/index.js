@@ -1,5 +1,5 @@
-const Plugin  = require('powercord/Plugin');
-const webpack = require('powercord/webpack');
+const Plugin                   = require('powercord/Plugin');
+const { getModule, constants } = require('powercord/webpack');
 
 module.exports = class Shake extends Plugin {
     start() {
@@ -11,13 +11,14 @@ module.exports = class Shake extends Plugin {
                 'I don\'t know what this is',
                 'shake <number>',
                 async (number) => {
-                    return webpack.getModule(['ComponentDispatch']).ComponentDispatch.dispatch(webpack.constants.ComponentActions.SHAKE_APP, {
+                    return getModule(['ComponentDispatch']).ComponentDispatch.dispatch(constants.ComponentActions.SHAKE_APP, {
                         duration: 10000,
                         intensity: number
                     });
                 }
             )
     }
+    
     unload() {
         powercord
             .pluginManager
