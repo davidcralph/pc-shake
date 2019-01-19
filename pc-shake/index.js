@@ -1,7 +1,7 @@
 const Plugin  = require('powercord/Plugin');
 const webpack = require('powercord/webpack');
 
-module.exports = class qtradio extends Plugin {
+module.exports = class shake extends Plugin {
     start() {
         powercord
             .pluginManager
