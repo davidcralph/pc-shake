@@ -9,10 +9,10 @@ module.exports = class Shake extends Plugin {
             .register(
                 'shake',
                 'I don\'t know what this is',
-                'shake <number>',
-                async (number) => {
+                'shake <number> [duration]',
+                async (number, duration) => {
                     return getModule(['ComponentDispatch']).ComponentDispatch.dispatch(constants.ComponentActions.SHAKE_APP, {
-                        duration: 10000,
+                        duration: duration? duration: 10000,
                         intensity: number
                     });
                 }
